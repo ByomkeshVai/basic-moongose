@@ -79,7 +79,7 @@ const bikeSchema = new Schema<TBike>({
     types: {
         type: String,
         enum: {
-            values: ['bike', 'scooter', 'electirc'],
+            values: ['bike', 'scooter', 'electric'],
             message: "{VALUE} is not a valid types",
         },
         required: [true, 'Bike types is required'],

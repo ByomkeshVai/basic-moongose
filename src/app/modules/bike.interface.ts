@@ -22,7 +22,7 @@ export type TBike = {
     id: string;
     info: TInformation;
     price: number;
-    types: 'bike' | 'scooter' | 'electirc';
+    types: 'bike' | 'scooter' | 'electric';
     engine: TEngine;
     isDeleted: boolean;
 }
