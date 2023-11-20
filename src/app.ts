@@ -1,5 +1,6 @@
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
+import { BikeRouters } from './app/modules/bike.router';
 
 const app: Application = express();
 
@@ -7,6 +8,7 @@ const app: Application = express();
 app.use(express.json());
 app.use(cors());
 
+app.use('/app/v1/bike', BikeRouters);
 
 app.get('/', (req: Request, res: Response) => {
   res.send("Hello world, running")
