@@ -82,7 +82,7 @@ const deleteBike = async (req: Request, res: Response) => {
   }
 };
 
-export const StudentControllers = {
+export const BikeControllers = {
   createBike,
   getAllBikes,
   getSingleBike,
