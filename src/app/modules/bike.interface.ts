@@ -29,5 +29,5 @@ export type TBike = {
 
 export interface BikeModel extends Model<TBike>{
     // eslint-disable-next-line no-unused-vars
-    isBikeExists(id: string): Promise<TBike | null>
+    isBikeExists(id: string): Promise<TBike | null>;
 }

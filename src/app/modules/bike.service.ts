@@ -6,7 +6,7 @@ const createBikeDB = async (bikeData: TBike) => {
         throw new Error("Bike Already Exists on Database  ")
     }
     const result = await Bike.create(bikeData)
-    return result
+    return result;
 }
 
 const getAllBikesFromDB = async () => {

@@ -62,7 +62,7 @@ const informationSchema = new Schema<TInformation>({
     },
 });
 
-const bikeSchema = new Schema<TBike>({
+const bikeSchema = new Schema<TBike, BikeModel>({
     id: {
         type: String,
         required: [true, 'ID is required'],
@@ -93,6 +93,12 @@ const bikeSchema = new Schema<TBike>({
       default: false,
     },
 })
+
+
+bikeSchema.statics.isBikeExists =async (id:string) => {
+    const existingBike = await Bike.findOne({ id });
+    return existingBike;
+}
 
 
 export const Bike = model<TBike, BikeModel>('Bike', bikeSchema);
